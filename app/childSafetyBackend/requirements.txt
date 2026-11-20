@@ -1,0 +1,9 @@
+-e ../../packages/python
+fastapi
+uvicorn
+httpx
+python-dotenv
+motor
+pymongo
+dnspython
+cryptography
