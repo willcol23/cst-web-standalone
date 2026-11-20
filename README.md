@@ -6,18 +6,17 @@ Python package in `packages/python`.
 
 ## Local setup
 
-Install Node.js, Python 3.11 or later, and a MongoDB instance accessible to the
-API. From the repository root in PowerShell:
+Install Node.js and Python 3.11 or later. From the repository root in
+PowerShell:
 
 ```powershell
 python -m venv .venv
 Set-Location app\childSafetyBackend
 ..\..\.venv\Scripts\python -m pip install -r requirements.txt
-Copy-Item .env.example .env
 ```
 
-Edit the new `.env` file to configure `MONGODB_URI` and `MONGODB_DB`. The API
-checks the MongoDB connection at startup. Run it from the backend directory:
+Configure any environment variables required by your deployment. Run the API
+from the backend directory:
 
 ```powershell
 ..\..\.venv\Scripts\python -m uvicorn main:app --host 127.0.0.1 --port 8000
